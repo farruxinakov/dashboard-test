@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "format:check": "prettier --check \"**/*.{ts,tsx,css}\" --cache",
-    "format:write": "prettier --write \"**/*.{ts,tsx,css}\" --cache"
+    "format:write": "prettier --write \"**/*.{ts,tsx,css}\" --cache",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
